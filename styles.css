@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0f172a;
+    color: #e2e8f0; /* Light gray text */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 400px;
+}
+
+form > input {
+    padding: 8px;
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid #475569;
+    border-radius: 5px;
+    outline: none;
+    min-width: 300px;
+    background-color: #324563;
+    color: #e2e8f0;
+    transition: border-color 0.3s ease;
+}
+
+form > input::placeholder {
+    color: #94a3b8;
+}
+
+form > input:focus {
+  border-color: #3b82f6;
+}
+
+main {
+    width: 100%;
+    max-width: 700px;
+    background-color: #324563;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;
+}
+
+main > .card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.card > .image-section {
+    flex: 1 1 150px;
+    max-width: 150px;
+}
+
+.image-section > .image-container {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-container > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+}
+
+.card > .user-info {
+    flex: 2 1 300px;
+}
+
+.user-info > h2 {
+    margin-bottom: 5px;
+}
+
+.user-info > p {
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+ul.info {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+ul.info > li {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+}
+
+.user-info > .repos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.repo {
+    background-color: #3b82f6;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.repo:hover {
+    background-color: #2563eb;
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .image-section {
+        width: 100%;
+        max-width: none;
+    }
+  
+    .image-section > .image-container {
+        padding-top: 0;
+        height: 150px;
+    }
+
+    ul.info {
+        justify-content: space-between;
+    }
+  
+    .user-info > .repos {
+        gap: 5px;
+    }
+  }
