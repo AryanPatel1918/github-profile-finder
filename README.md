@@ -8,7 +8,7 @@ This is a lightweight web app that allows users to search for any GitHub usernam
 - View profile image, bio, and stats (followers, following, repos)
 - Clickable links to all public repositories
 
-## 📸 Preview
+## 📸 Screenshot
 
 ![screenshot](screenshot.png)
 
