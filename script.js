@@ -1,33 +1,33 @@
 const apiUrl = "https://api.github.com/users/"
 const form = document.getElementById("form")
 const inputEl = document.getElementById("search")
-const main = document.querySelector("#main")
+const main = document.getElementById("main")
 
 async function getUser(userName) {
     const response = await fetch(apiUrl + userName)
     const data = await response.json()
     main.style.display = "block"
     const card = `
-    <div class="card">
-        <div class="image-section">
-            <div class="image-container">
-                <img class="avatar" src="${data.avatar_url}" alt="">
+        <div class="card">
+            <div class="image-section">
+                <div class="image-container">
+                    <img class="avatar" src="${data.avatar_url}" alt="">
+                </div>
             </div>
-        </div>
-        <div class="user-info">
-            <h2>${data.name}</h2>
-            <p>${data.bio}</p>
+            <div class="user-info">
+                <h2>${data.name}</h2>
+                <p>${data.bio}</p>
 
-            <ul class="info">
-                <li>${data.followers} <strong>Followers</strong></li>
-                <li>${data.following} <strong>Following</strong></li>
-                <li>${data.public_repos} <strong>Repos</strong></li>
-            </ul>
+                <ul class="info">
+                    <li>${data.followers} <strong>Followers</strong></li>
+                    <li>${data.following} <strong>Following</strong></li>
+                    <li>${data.public_repos} <strong>Repos</strong></li>
+                </ul>
 
-            <div class="repos"></div>
-            
-        </div>
-    </div>`
+                <div class="repos"></div>
+                
+            </div>
+        </div>`
 
     main.innerHTML = card
     getRepos(userName)
@@ -47,6 +47,5 @@ form.addEventListener("submit", (e) => {
     e.preventDefault()
     if (inputEl.value.trim()) {
         getUser(inputEl.value.trim())
-        inputEl.value = ""
     }
 })
