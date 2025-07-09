@@ -141,6 +141,12 @@ ul.info > li {
     background-color: #2563eb;
 }
 
+#user-not-found {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
 @media (max-width: 600px) {
     .card {
         flex-direction: column;
