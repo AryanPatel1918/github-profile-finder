@@ -2,9 +2,8 @@
 
 This is a lightweight web app that allows users to search for any GitHub username and view their profile details using the GitHub API.
 
-## 🚀 Live Demo
-
-[Click here to try it out](https://github-profile-finder2025.netlify.app/)
+## 🌐 Live Demo
+🔗 [Check out the live app here: ](https://github-profile-finder2025.netlify.app/)
 
 ## ✨ Features
 
